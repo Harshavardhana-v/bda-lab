@@ -1,0 +1,42 @@
+docker exec -it hadoop javac -version
+docker commit hadoop apache/hadoop:withjava
+docker images
+notepad docker-compose.yml
+notepad config
+mv config.txt config
+note core-site.xml
+notepad hdfs-site.xml
+docker compose up -d
+docker compose ps
+docker compose down
+docker compose run --rm namenode hdfs namenode -format
+notepad HdfsDemo.java
+docker compose exec namenode bash
+hdfs dfs -mkdir -p /user/student
+hdfs dfs -ls/user
+
+exit 
+
+docker compose cp HdfsDemo.java namenode:/opt/Hadoop/HdfsDemo.java
+
+docker compose exec namenode bash
+cd /opt/Hadoop
+
+rm -rf classes hdfsdemo.jar
+
+export HADOOP_CLASSPATH=$(hadoop classpath)
+mkdir classes
+javac -classpath $HADOOP_CLASSPATH -d classes HdfsDemo.java
+
+ls -l classes/
+jar -cvf hdfsdemo.jar -C classes .
+jar -tf hdfsdemo.jar
+hadoop jar hdfsdemo.jar HdfsDemo
+exit
+
+
+
+
+
+
+
