@@ -35,6 +35,17 @@ hadoop jar hdfsdemo.jar HdfsDemo
 exit
 
 
+cmd to download java and javac
+inside cmd :
+winget install --id EclipseAdoptium.Temurin.8.JDK -e
+
+
+cmd to download hadoop 
+inside cmd:
+curl -L -o hadoop-3.3.6.tar.gz https://archive.apache.org/dist/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz
+
+
+
 
 
 
