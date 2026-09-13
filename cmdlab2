@@ -1,3 +1,4 @@
+// lab2 cmd only
 docker exec -it hadoop javac -version
 docker commit hadoop apache/hadoop:withjava
 docker images
