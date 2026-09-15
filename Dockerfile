@@ -19,4 +19,4 @@ rm hadoop-3.3.6.tar.gz
 ENV HADOOP_HOME=/opt/hadoop
 ENV PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
 CMD ["/bin/bash"]
-
+// docker file for bda1 lab
